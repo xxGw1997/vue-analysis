@@ -45,6 +45,7 @@ export function proxy (target: Object, sourceKey: string, key: string) {
   Object.defineProperty(target, key, sharedPropertyDefinition)
 }
 
+// 响应式原理的入口
 export function initState (vm: Component) {
   vm._watchers = []
   const opts = vm.$options
